@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#5d1729">
+  <meta name="description" content="Invitación de boda Laura & Gabriel">
+  <title>Laura & Gabriel | Nos casamos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="invitation">
+
+    <!-- PÁGINA 1 -->
+    <section class="page page-1" aria-label="Invitación">
+      <img src="assets/page1.png" alt="Invitación de boda - página 1">
+    </section>
+
+    <!-- PÁGINA 2 + CUENTA REGRESIVA -->
+    <section class="page page-2" aria-label="Fecha de la boda">
+      <img src="assets/page2.png" alt="Nuestra gran día - 24 de octubre de 2027">
+
+      <div class="countdown" aria-label="Cuenta regresiva para el 24 de octubre de 2027">
+        <div class="count-item">
+          <span id="days">00</span>
+          <small>Días</small>
+        </div>
+        <div class="count-item">
+          <span id="hours">00</span>
+          <small>Horas</small>
+        </div>
+        <div class="count-item">
+          <span id="minutes">00</span>
+          <small>Minutos</small>
+        </div>
+        <div class="count-item">
+          <span id="seconds">00</span>
+          <small>Segundos</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- PÁGINA 3 + BOTÓN UBICACIÓN -->
+    <section class="page page-3" aria-label="Lugar del evento">
+      <img src="assets/page3.png" alt="Casa de eventos La Candelaria">
+      <a
+        class="hotspot location-hotspot"
+        href="https://www.google.com.co/maps/place/La+Candelaria+CASA+DE+EVENTOS/@8.7420106,-75.9743619,12z/data=!4m15!1m7!3m6!1s0x8e5a3116c4b08423:0x8873f039683a5b2d!2sLa+Candelaria+CASA+DE+EVENTOS!8m2!3d8.7420106!4d-75.842526!16s%2Fg%2F11wj3f0q4w!3m6!1s0x8e5a3116c4b08423:0x8873f039683a5b2d!8m2!3d8.7420106!4d-75.842526!15sCh1jYXNhIGRlIGV2ZW50b3MgbGEgY2FuZGVsYXJpYVofIh1jYXNhIGRlIGV2ZW50b3MgbGEgY2FuZGVsYXJpYZIBFmZ1bmN0aW9uX3Jvb21fZmFjaWxpdHmaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMnh3UWxWSFduaGFWVXB3V0RCd1QyTllVbGxSTUU0eVZFVlpORk15WXhBQuABAPoBBAgAEDE!16s%2Fg%2F11wj3f0q4w?entry=ttu&g_ep=EgoyMDI2MDkxMy4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Ver ubicación en Google Maps"
+      ></a>
+    </section>
+
+    <!-- PÁGINA 4 -->
+    <section class="page page-4" aria-label="Itinerario">
+      <img src="assets/page4.png" alt="Itinerario de la boda">
+    </section>
+
+    <!-- PÁGINA 5 -->
+    <section class="page page-5" aria-label="Dress Code">
+      <img src="assets/page5.png" alt="Dress Code - Formal Elegante">
+    </section>
+
+    <!-- PÁGINA 6 -->
+    <section class="page page-6" aria-label="Casa de eventos">
+      <img src="assets/page6.png" alt="Casa de eventos La Candelaria">
+    </section>
+
+    <!-- PÁGINA 7 + CONFIRMAR ASISTENCIA -->
+    <section class="page page-7" aria-label="Confirmación de asistencia">
+      <img src="assets/page7.png" alt="Esperamos celebrar contigo">
+      <a
+        class="hotspot rsvp-hotspot"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSd8o1Lv6OdzbHdmkUFkyf_Hg2EeOKA5Iq4UEVGPNGII5bltEQ/viewform?usp=header"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Confirmar asistencia"
+      ></a>
+    </section>
+
+    <!-- PÁGINA 8 -->
+    <section class="page page-8" aria-label="Cierre de la invitación">
+      <img src="assets/page8.png" alt="Nos casamos - Laura & Gabriel">
+    </section>
+
+  </main>
+
+  <!-- La canción puede tener cualquier nombre: el script busca automáticamente
+       el primer archivo de audio dentro de assets. -->
+  <audio id="weddingMusic" preload="auto" loop playsinline></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

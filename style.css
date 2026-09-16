@@ -1,0 +1,150 @@
+/* =========================================================
+   INVITACIÓN WEB - LAURA & GABRIEL
+   ========================================================= */
+
+:root {
+  --vino: #5d1729;
+  --crema: #eee2cf;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  background: var(--crema);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--crema);
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+.invitation {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.page {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 0; /* elimina cualquier separación entre imágenes */
+  overflow: hidden;
+}
+
+.page img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Áreas invisibles que se colocan exactamente sobre los botones
+   que ya están dibujados en las imágenes. */
+.hotspot {
+  position: absolute;
+  display: block;
+  z-index: 5;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Página 3: botón "Ver Ubicación" */
+.location-hotspot {
+  left: 23%;
+  top: 81.3%;
+  width: 54%;
+  height: 8%;
+}
+
+/* Página 7: botón "Confirmar Asistencia" */
+.rsvp-hotspot {
+  left: 29%;
+  top: 62.4%;
+  width: 43%;
+  height: 8.5%;
+}
+
+/* Cuenta regresiva de la página 2.
+   Está superpuesta sobre el espacio vacío entre la fecha y las fotos. */
+.countdown {
+  position: absolute;
+  z-index: 4;
+  top: 38%;
+  left: 7%;
+  width: 86%;
+  height: 14%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 4vw, 52px);
+  color: var(--vino);
+  pointer-events: none;
+  line-height: 1;
+}
+
+.count-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 13%;
+}
+
+.count-item span {
+  font-family: "Great Vibes", "Brush Script MT", "Segoe Script", cursive;
+  font-size: clamp(30px, 6.5vw, 76px);
+  font-weight: 400;
+  line-height: 0.9;
+  white-space: nowrap;
+  text-shadow: 0 1px 1px rgba(93, 23, 41, 0.08);
+}
+
+.count-item small {
+  margin-top: clamp(8px, 1.2vw, 14px);
+  font-family: "Great Vibes", "Brush Script MT", "Segoe Script", cursive;
+  font-size: clamp(15px, 2.4vw, 28px);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* En celulares muy estrechos, compactamos la cuenta regresiva. */
+@media (max-width: 420px) {
+  .countdown {
+    gap: 8px;
+    left: 4%;
+    width: 92%;
+  }
+
+  .count-item span {
+    font-size: clamp(25px, 8vw, 38px);
+  }
+
+  .count-item small {
+    margin-top: 6px;
+    font-size: clamp(13px, 3.5vw, 17px);
+  }
+}
+
+/* Evita que la selección accidental de la imagen genere una apariencia rara
+   durante el desplazamiento en móviles. */
+@media (hover: none) {
+  .hotspot {
+    outline: none;
+  }
+}
